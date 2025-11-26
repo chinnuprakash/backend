@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: 0.0
 os: linux
 files:
@@ -12,3 +13,27 @@ hooks:
     - location: scripts/start_server.sh
       timeout: 300
       runas: ubuntu
+=======
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ubuntu/backend
+
+hooks:
+  ApplicationStop:
+    - location: scripts/stop_server.sh
+      timeout: 300
+      runas: ubuntu
+
+  AfterInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: ubuntu
+
+  ApplicationStart:
+    - location: scripts/start_server.sh
+      timeout: 300
+      runas: ubuntu
+>>>>>>> 8757bca8a14a295e4eae7d7f1381f6439a4b3508

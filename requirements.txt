@@ -1,5 +1,2 @@
-<<<<<<< HEAD
-flask
-=======
-flask
->>>>>>> 8757bca8a14a295e4eae7d7f1381f6439a4b3508
+Flask==2.2.5
+gunicorn==21.2.0

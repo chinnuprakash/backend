@@ -1,4 +1,4 @@
 #!/bin/bash
-pkill -f "python3 app.py" || true
+echo "Starting backend server..."
 cd /home/ubuntu/backend
-nohup python3 app.py > app.log 2>&1 &
+gunicorn app:app --bind 0.0.0.0:5000 --workers 3
